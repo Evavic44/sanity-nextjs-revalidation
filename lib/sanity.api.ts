@@ -13,10 +13,7 @@ export const token = checkValue(
   "NEXT_PUBLIC_SANITY_ACCESS_TOKEN"
 );
 
-export const hookSecret = checkValue(
-  process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET,
-  "process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET"
-);
+export const hookSecret = process.env.NEXT_PUBLIC_SANITY_HOOK_SECRET;
 
 export const apiVersion =
   process.env.NEXT_PUBLIC_SANITY_API_VERSION || "2023-07-21";

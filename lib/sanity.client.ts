@@ -4,13 +4,19 @@ import {
   type ClientConfig,
   type QueryParams,
 } from "@sanity/client";
-import { projectId, dataset, apiVersion, token } from "@/lib/sanity.api";
+import {
+  projectId,
+  dataset,
+  apiVersion,
+  token,
+  hookSecret,
+} from "@/lib/sanity.api";
 
 const config: ClientConfig = {
   projectId,
   dataset,
   apiVersion,
-  useCdn: false,
+  useCdn: hookSecret ? false : true, // set CDN to live API when webhook secret is undefined
   token,
 };
 
@@ -26,7 +32,8 @@ export async function sanityFetch<QueryResponse>({
   tags: string[];
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, qParams, {
-    cache: "force-cache",
+    // disable cache when hook secret is undefined for development only.
+    cache: hookSecret ? "force-cache" : "no-cache",
     next: { tags },
   });
 }
