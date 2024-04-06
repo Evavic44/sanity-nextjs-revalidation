@@ -1,4 +1,4 @@
-This is a guide to explain how to set-up on-demand revalidation in a Sanity Nextjs project. Read the [article](article-link). Visit the [live demo](live-demo) to see the project live.
+This is a guide to explain how to set-up on-demand revalidation in a Sanity Nextjs project. Read the [article][article-link]. Visit the [live demo][live-demo] to see the project live.
 
 ## Live Preview
 
@@ -52,7 +52,7 @@ npm install
 
 <!-- LINK VARIABLES -->
 
-[article-link]: https://victoreke.com/blog/sanity-webhooks-and-on-demand-revalidation
+[article-link]: https://victoreke.com/blog/sanity-webhooks-and-on-demand-revalidation-in-nextjs
 [live-demo]: https://sanity-nextjs-revalidate.vercel.app
 [sanity-manage]: https://sanity.io/manage
 [3000]: http://localhost:3000
