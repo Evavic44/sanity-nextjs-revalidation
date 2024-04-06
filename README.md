@@ -44,6 +44,7 @@ npm install
 - `NEXT_PUBLIC_SANITY_DATASET` Set to "server" or a new project dataset.
 - `NEXT_PUBLIC_SANITY_API_VERSION`: Set to your current date in YYYY-MM-DD format or leave as is
 - `NEXT_PUBLIC_SANITY_ACCESS_TOKEN` Visit [Sanity Manage][sanity-manage] to create an access token.
+- `NEXT_PUBLIC_SANITY_HOOK_SECRET` Visit [Sanity Manage > API][sanity-manage] to create hook secret.
 
 - Now run `npm run dev`
   Visit [http://localhost:3000][3000] to see your site <br />
